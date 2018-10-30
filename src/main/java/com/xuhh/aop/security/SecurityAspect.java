@@ -22,11 +22,11 @@ public class SecurityAspect {
 	AuthService authService;
 
 	@Pointcut("@annotation(AdminOnly)")
-	public void adminOnly(){
+	public void adminOnly2(){
 
 	}
 
-	@Before("adminOnly()")
+	@Before("adminOnly2()")
 	public void check(){
 		authService.checkAccess();
 	}
